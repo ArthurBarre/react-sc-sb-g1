@@ -24,6 +24,7 @@ npm run-script build
 ### Run storybook
 ```
 npm run storybook
+```
 
 ### Design
 ![alt text](https://github.com/ArthurBarre/react-sc-sb-g1/blob/master/design/chatmessage.jpg)
