@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
 
 export const colors = {
-    purple: "purple",
-    grey: "grey"
+  purple: "purple",
+  grey: "grey"
 };
 
 const BadgeWrapper = styled.span`
@@ -19,17 +19,17 @@ const BadgeWrapper = styled.span`
 `;
 
 const Badge = props => {
-    const { text, color } = props;
-    return <BadgeWrapper color={color}>{text}</BadgeWrapper>;
+	const { text, color } = props;
+	return <BadgeWrapper color={color}>{text}</BadgeWrapper>;
 };
 
 Badge.propTypes = {
-    color: PropTypes.oneOf(Object.keys(colors)),
-    text: PropTypes.string
+	color: PropTypes.oneOf(Object.keys(colors)),
+	text: PropTypes.string
 };
 
 Badge.defaultProps = {
-    color: colors.grey
+	color: colors.grey
 };
 
 export default Badge;
