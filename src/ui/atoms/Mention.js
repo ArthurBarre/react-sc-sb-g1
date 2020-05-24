@@ -1,17 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import Colors from "../particles/Colors";
 
-const Mention = styled.div`
-  width: auto;
-  max-width: 250px;
+const Mention = styled.span`
+  margin: 0 5px; 
   padding: 2px 4px;
-  margin-left: 13px;
-  background-color: #323239;
+  color: ${ Colors.text_primary };
+  background-color: ${ Colors.background_secondary };
   text-transform: capitalize;
 `;
 
-Mention.propTypes = {};
-
-Mention.defaultProps = {};
+// If not taged by me 
+// No Padding
+// No background-color
 
 export default Mention;

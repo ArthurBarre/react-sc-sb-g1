@@ -2,11 +2,12 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
+
 import User, { contrasts, colors } from "../atoms/User";
+import Message from "../atoms/Message";
 import Icon from "../atoms/Icon";
 import Hour from "../atoms/Hour";
 import Mention from "../atoms/Mention";
-import Message from "../atoms/Message";
 
 const ChatWrapper = styled.div`
   padding: 5px 20px;
