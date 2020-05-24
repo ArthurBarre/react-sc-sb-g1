@@ -41,7 +41,7 @@ Chat.propTypes = {
 };
 
 Chat.defaultProps = {
-  username: "shaticedu75222",
+  username: "shaticedu75",
   message: "Hello, comment ça va dans la casa ?",
 };
 
