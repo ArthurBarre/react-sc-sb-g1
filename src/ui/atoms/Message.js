@@ -13,11 +13,11 @@ const Message = ({ message }) => {
 };
 
 Message.propTypes = {
-  message: PropTypes.string,
+  message: PropTypes.string.isRequired,
 };
 
 Message.defaultProps = {
-  message: "Ceci est le contenu du message",
+  // message: "Ceci est le contenu du message",
 };
 
 export default Message;
