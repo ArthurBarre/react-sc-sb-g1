@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
 
@@ -8,28 +8,28 @@ export const colors = {
   orange: Colors.orange,
 };
 
-export const contrasts = {
-  true: "1",
-  false: ".8",
-};
 
 const UserWrapper = styled.span`
   cursor: pointer; 
-  opacity ${ (props) =>
-    props.contrast === contrasts.true ? contrasts.true : contrasts.false };
+  color ${(props) =>
+    props.color === colors.purple ? colors.purple : colors.orange};
   font-weight: 700;
-  color ${ (props) =>
-    props.color === colors.purple ? colors.purple : colors.orange };
+  opacity: 1;
+  ${({ contrast }) =>
+    contrast &&
+    css`
+      opacity: 0.8;
+    `}
 
   span {
-    color: ${ Colors.text_primary };
+    color: ${Colors.text_primary};
   }
 `;
 
 const User = ({ username, color, contrast }) => {
   return (
-    <UserWrapper contrast={ contrast } color={ color }>
-      { username }
+    <UserWrapper contrast={contrast} color={color}>
+      {username}
       <span>: </span>
     </UserWrapper>
   );
@@ -43,8 +43,8 @@ User.propTypes = {
 
 User.defaultProps = {
   username: "jesuislepseudo",
-  color: colors.orange, 
-  contrast: contrasts.true,
+  color: colors.orange,
+  contrast: false,
 };
 
 export default User;

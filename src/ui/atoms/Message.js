@@ -11,7 +11,6 @@ const MessageWrapper = styled.span`
       background-color: ${Colors.brand_light};
       color: white;
       padding: 3px;
-      border-radius: 1px;
     `}
 `;
 

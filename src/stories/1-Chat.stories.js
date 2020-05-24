@@ -51,7 +51,17 @@ export const ChatWithHighlight = () => (
     username={text("UserName", "hlnlapookie")}
     message={text(
       "Message",
-      "Hello,  this is my version with highlight, used to make me more visible"
+      "Hello,  this is my version with highlight, used to make me more visible. Hello,  this is my version with highlight, used to make me more visible"
+    )}
+  />
+);
+export const ChatWithContrast = () => (
+  <Chat
+    contrast
+    username={text("UserName", "hlnlapookie")}
+    message={text(
+      "Message",
+      "Hello,  this is my version with highlight, used to make me more visible. Hello,  this is my version with highlight, used to make me more visible"
     )}
   />
 );

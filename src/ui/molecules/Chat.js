@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
 
-import User, { contrasts, colors } from "../atoms/User";
+import User from "../atoms/User";
 import Message from "../atoms/Message";
 import Icon from "../atoms/Icon";
 import Hour from "../atoms/Hour";
@@ -44,14 +44,23 @@ const Chat = ({
 };
 
 Chat.propTypes = {
-  icon: PropTypes.bool,
+  username: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
   hour: PropTypes.string,
   mention: PropTypes.string,
+  icon: PropTypes.bool,
+  contrast: PropTypes.bool,
+  highLight: PropTypes.bool,
 };
 
 Chat.defaultProps = {
-  username: "shaticedu75",
-  message: "Hello, comment ça va dans la casa ?",
+  username: "",
+  message: "",
+  hour: "",
+  mention: "",
+  icon: false,
+  contrast: false,
+  highLight: false,
 };
 
 export default Chat;
