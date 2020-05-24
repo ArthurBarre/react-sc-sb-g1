@@ -7,30 +7,30 @@ import Icon from "../atoms/Icon";
 import Hour from "../atoms/Hour";
 import Mention from "../atoms/Mention";
 
-// export const borders = {
-//   true: "4px solid #9146FF",
-//   false: "none"
-// };
-
 const ChatWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: auto;
-  max-width: 300px;
+  // display: flex;
+  // align-items: flex-start;
+  // width: auto;
+  // max-width: 300px;
   padding: 5px 20px;
   font-family: sans-serif;
   font-size: 12px;
   line-height: 20px;
-  color: ${Colors.text_primary};
   background-color: ${Colors.background_primary};
 `;
 
-const MessageWrapper = styled.div`
+const MessageWrapper = styled.span`
   width: auto;
   overflow-wrap: break-word;
   max-width: 250px;
   margin-left: 13px;
+  color: ${Colors.text_primary};
 `;
+
+// export const borders = {
+//   true: "4px solid #9146FF",
+//   false: "none"
+// };
 
 // border-left ${props => (props.border === borders.true ? borders.true : borders.false)};
 
@@ -43,11 +43,11 @@ const MessageWrapper = styled.div`
 const Chat = ({ message, username, mention, hour, icon }) => {
   return (
     <ChatWrapper>
-      {hour && <Hour>{hour}</Hour>}
+      {hour && <Hour>{ hour }</Hour>}
       {icon && <Icon></Icon>}
-      <User username={username}></User>:
-      <MessageWrapper>{message}</MessageWrapper>
-      {mention && <Mention>@{mention}</Mention>}
+      <User username={ username }></User>:
+      <MessageWrapper>{ message }</MessageWrapper>
+      {mention && <Mention>@{ mention }</Mention>}
     </ChatWrapper>
   );
 };
@@ -62,8 +62,8 @@ Chat.propTypes = {
 };
 
 Chat.defaultProps = {
-  username: "shatice",
-  message: "Ceci est un message",
+  username: "shaticedu75",
+  message: "Hello, comment ça va dans la casa ?",
   mention: "",
   contrast: contrasts.true,
 };

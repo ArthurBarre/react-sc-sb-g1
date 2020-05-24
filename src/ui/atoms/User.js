@@ -29,8 +29,7 @@ const UserWrapper = styled.span`
   }
 `;
 
-const User = (props) => {
-  const { username, color, contrast } = props;
+const User = ( { username, color, contrast } ) => {
   return (
     <UserWrapper contrast={contrast} color={color}>
       {username}
