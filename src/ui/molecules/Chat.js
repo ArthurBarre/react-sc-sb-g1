@@ -8,6 +8,7 @@ import Message from "../atoms/Message";
 import Icon from "../atoms/Icon";
 import Hour from "../atoms/Hour";
 import Mention from "../atoms/Mention";
+import { HighlightSpanKind } from "typescript";
 
 const ChatWrapper = styled.div`
   padding: 5px 20px;
@@ -22,6 +23,13 @@ const ChatWrapper = styled.div`
     `}
 `;
 
+const HighlightWarning = styled.div`
+  color: #adadb7;
+  margin-bottom: 5px;
+`;
+
+const ChatContainer = styled.div``;
+
 const Chat = ({
   username,
   contrast,
@@ -34,11 +42,16 @@ const Chat = ({
 }) => {
   return (
     <ChatWrapper highLight={highLight}>
-      {hour && <Hour>{hour}</Hour>}
-      {icon && <Icon></Icon>}
-      <User username={username} contrast={contrast} color={color}></User>
-      <Message highLight={highLight} message={message}></Message>
-      {mention && <Mention>@{mention}</Mention>}
+      {highLight && (
+        <HighlightWarning>Message has been highlighted</HighlightWarning>
+      )}
+      <ChatContainer>
+        {hour && <Hour>{hour}</Hour>}
+        {icon && <Icon></Icon>}
+        <User username={username} contrast={contrast} color={color}></User>
+        <Message highLight={highLight} message={message}></Message>
+        {mention && <Mention>@{mention}</Mention>}
+      </ChatContainer>
     </ChatWrapper>
   );
 };
