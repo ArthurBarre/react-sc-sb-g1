@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
 import User, { contrasts } from "../atoms/User";
@@ -8,10 +8,10 @@ import Hour from "../atoms/Hour";
 import Mention from "../atoms/Mention";
 
 const ChatWrapper = styled.div`
-  // display: flex;
-  // align-items: flex-start;
-  // width: auto;
-  // max-width: 300px;
+  display: flex;
+  align-items: flex-start;
+  width: auto;
+  max-width: 300px;
   padding: 5px 20px;
   font-family: sans-serif;
   font-size: 12px;
@@ -43,11 +43,11 @@ const MessageWrapper = styled.span`
 const Chat = ({ message, username, mention, hour, icon }) => {
   return (
     <ChatWrapper>
-      {hour && <Hour>{ hour }</Hour>}
+      {hour && <Hour>{hour}</Hour>}
       {icon && <Icon></Icon>}
-      <User username={ username }></User>:
-      <MessageWrapper>{ message }</MessageWrapper>
-      {mention && <Mention>@{ mention }</Mention>}
+      <User username={username}></User>:
+      <MessageWrapper>{message}</MessageWrapper>
+      {mention && <Mention>@{mention}</Mention>}
     </ChatWrapper>
   );
 };

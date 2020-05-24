@@ -1,7 +1,6 @@
 import React from "react";
 import Colors from "../particles/Colors";
-import styled, { css } from "styled-components";
-import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const HourWrapper = styled.span`
   color: ${Colors.text_secondary};

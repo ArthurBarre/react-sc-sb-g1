@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Mention = styled.div`
@@ -7,6 +6,7 @@ const Mention = styled.div`
   padding: 2px 4px;
   margin-left: 13px;
   background-color: #323239;
+  color: white;
   text-transform: capitalize;
 `;
 

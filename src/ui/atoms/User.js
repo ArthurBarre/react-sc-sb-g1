@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
 
@@ -24,12 +24,11 @@ const UserWrapper = styled.span`
   opacity ${(props) =>
     props.contrast === contrasts.true ? contrasts.true : contrasts.false};
   :hover{
-
   cursor: pointer; 
   }
 `;
 
-const User = ( { username, color, contrast } ) => {
+const User = ({ username, color, contrast }) => {
   return (
     <UserWrapper contrast={contrast} color={color}>
       {username}
