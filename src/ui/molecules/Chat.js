@@ -6,25 +6,14 @@ import User, { contrasts } from "../atoms/User";
 import Icon from "../atoms/Icon";
 import Hour from "../atoms/Hour";
 import Mention from "../atoms/Mention";
+import Message from "../atoms/Message";
 
 const ChatWrapper = styled.div`
-  // display: flex;
-  // align-items: flex-start;
-  // width: auto;
-  // max-width: 300px;
   padding: 5px 20px;
   font-family: sans-serif;
   font-size: 12px;
   line-height: 20px;
   background-color: ${Colors.background_primary};
-`;
-
-const MessageWrapper = styled.span`
-  width: auto;
-  overflow-wrap: break-word;
-  max-width: 250px;
-  margin-left: 13px;
-  color: ${Colors.text_primary};
 `;
 
 // export const borders = {
@@ -40,13 +29,13 @@ const MessageWrapper = styled.span`
 //  text au dessus color #ADADB8
 //  svg du text au dessus width/height 20px
 
-const Chat = ({ message, username, mention, hour, icon }) => {
+const Chat = ({ username, contrast, message, hour, icon, mention }) => {
   return (
     <ChatWrapper>
       {hour && <Hour>{ hour }</Hour>}
       {icon && <Icon></Icon>}
-      <User username={ username }></User>:
-      <MessageWrapper>{ message }</MessageWrapper>
+      <User username={ username } contrast={ contrast }></User>:
+      <Message message={ message }></Message>
       {mention && <Mention>@{ mention }</Mention>}
     </ChatWrapper>
   );
@@ -55,17 +44,16 @@ const Chat = ({ message, username, mention, hour, icon }) => {
 Chat.propTypes = {
   username: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-  mention: PropTypes.string,
-  contrast: PropTypes.bool,
   icon: PropTypes.bool,
   hour: PropTypes.string,
+  mention: PropTypes.string,
+  contrast: PropTypes.bool,
 };
 
 Chat.defaultProps = {
-  username: "shaticedu75",
+  username: "shaticedu75222",
   message: "Hello, comment ça va dans la casa ?",
-  mention: "",
-  contrast: contrasts.true,
+  contrast: contrasts.false,
 };
 
 export default Chat;

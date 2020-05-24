@@ -38,14 +38,15 @@ const User = ( { username, color, contrast } ) => {
 };
 
 User.propTypes = {
-  color: PropTypes.oneOf(Object.keys(colors)),
   username: PropTypes.string,
+  color: PropTypes.oneOf(Object.keys(colors)),
   contrast: PropTypes.bool,
 };
 
 User.defaultProps = {
-  username: "shaticedu75",
+  username: "jesuislepseudo",
   color: colors.purple,
+  contrast: contrasts.true,
 };
 
 export default User;
