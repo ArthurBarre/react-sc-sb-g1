@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 const IconWrapper = styled.span`
-  width: 18px;
-  height: 18px;
-  margin: 0 3px 2px 0;
+  svg {
+    width: 18px;
+    height: 18px;
+    margin: 0 3px -4px 0;
+  }
 `;
 
 const Icon = () => {
@@ -40,9 +41,5 @@ const Icon = () => {
     </IconWrapper>
   );
 };
-
-Icon.propTypes = {};
-
-Icon.defaultProps = {};
 
 export default Icon;
