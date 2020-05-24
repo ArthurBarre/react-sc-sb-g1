@@ -9,68 +9,36 @@ export default {
 };
 
 export const BaseChat = () => (
-  <Chat 
-    username={text(
-      "UserName", 
-      "shatice"
-    )} 
-    message={text(
-      "Message", 
-      "Mais ou et donc or ni car"
-    )} 
+  <Chat
+    icon
+    hour="12h30"
+    username={text("UserName", "shatice")}
+    message={text("Message", "Mais ou et donc or ni car")}
   />
 );
 
-// export const LongChatMessage = () => (
-//   <Chat
-//     message={text(
-//       "Message",
-//       "Quiquequoidontoùmaisouetdoncornicar"
-//     )}
-//   />
-// );
+export const LongChatMessage = () => (
+  <Chat message={text("Message", "Quiquequoidontoùmaisouetdoncornicar")} />
+);
 
 export const ChatWithIcon = () => (
-  <Chat 
-    icon={text(
-      "Icon", "😀"
-    )} 
-    message={text(
-      "Message", 
-      "This is a message with icon"
-    )} 
-  />
+  <Chat icon message={text("Message", "This is a message with icon")} />
 );
 
 export const ChatWithHour = () => (
-  <Chat 
-    hour="4:30" 
-    message={text(
-      "Message", 
-      "This is a message with icon"
-    )}
-  />
+  <Chat hour="4:30" message={text("Message", "This is a message with icon")} />
 );
 
 export const ChatWithMention = () => (
-  <Chat 
-    mention="tutur" 
-    message={text(
-      "Message", 
-      "@lnLaSorciere"
-    )} 
-  />
+  <Chat mention="tutur" message={text("Message", "Salut")} />
 );
 
 export const ChatFull = () => (
   <Chat
-    icon={null}
+    icon
     hour="4:30"
     mention="tutur"
     username="shatice"
-    message={text(
-      "Message", 
-      "Chat with icon, hour, and message"
-    )}
+    message={text("Message", "Chat with icon, hour, and message")}
   />
 );
