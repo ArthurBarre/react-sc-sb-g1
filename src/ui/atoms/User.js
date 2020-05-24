@@ -4,27 +4,32 @@ import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
 
 export const colors = {
-  red: "", 
+  red: "",
   blue: "",
-  green: "", 
-  purple: "", 
-  yellow: "", 
-  orange: ""
+  green: "",
+  purple: "",
+  yellow: "",
+  orange: "",
 };
 
 export const contrasts = {
   true: "1",
-  false: ".8"
+  false: ".8",
 };
 
 const UserWrapper = styled.span`
   font-weight: 700;
-  color ${props => (props.color === colors.purple ? Colors.brand_primary : Colors.neutral_grey)};
-  opacity ${props => (props.contrast === contrasts.true ? contrasts.true : contrasts.false)};
+  color ${(props) =>
+    props.color === colors.purple ? Colors.brand_primary : Colors.neutral_grey};
+  opacity ${(props) =>
+    props.contrast === contrasts.true ? contrasts.true : contrasts.false};
+  :hover{
+
   cursor: pointer; 
+  }
 `;
 
-const User = props => {
+const User = (props) => {
   const { username, color, contrast } = props;
   return (
     <UserWrapper contrast={contrast} color={color}>
@@ -35,8 +40,8 @@ const User = props => {
 
 User.propTypes = {
   color: PropTypes.oneOf(Object.keys(colors)),
-  username: PropTypes.string, 
-  contrast: PropTypes.bool
+  username: PropTypes.string,
+  contrast: PropTypes.bool,
 };
 
 User.defaultProps = {

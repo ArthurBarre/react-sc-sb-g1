@@ -5,6 +5,7 @@ import Colors from "../particles/Colors";
 import User, { contrasts } from "../atoms/User";
 import Icon from "../atoms/Icon";
 import Hour from "../atoms/Hour";
+import Mention from "../atoms/Mention";
 
 // export const borders = {
 //   true: "4px solid #9146FF",
@@ -23,16 +24,9 @@ const ChatWrapper = styled.div`
   color: ${Colors.text_primary};
   background-color: ${Colors.background_primary};
 `;
-const MentionWrapper = styled.div`
-  width: 100%;
-  max-width: 250px;
-  padding: 2px 4px;
-  margin-left: 13px;
-  background-color: #323239;
-  text-transform: capitalize;
-`;
+
 const MessageWrapper = styled.div`
-  width: 100%;
+  width: auto;
   overflow-wrap: break-word;
   max-width: 250px;
   margin-left: 13px;
@@ -46,11 +40,6 @@ const MessageWrapper = styled.div`
 //  text au dessus color #ADADB8
 //  svg du text au dessus width/height 20px
 
-//  mention
-//  padding 2px 4px
-//  background-color #323239
-//  text-transform capitalize;
-
 const Chat = ({ message, username, mention, hour, icon }) => {
   return (
     <ChatWrapper>
@@ -58,7 +47,7 @@ const Chat = ({ message, username, mention, hour, icon }) => {
       {icon && <Icon></Icon>}
       <User username={username}></User>:
       <MessageWrapper>{message}</MessageWrapper>
-      {mention && <MentionWrapper>@{mention}</MentionWrapper>}
+      {mention && <Mention>@{mention}</Mention>}
     </ChatWrapper>
   );
 };
