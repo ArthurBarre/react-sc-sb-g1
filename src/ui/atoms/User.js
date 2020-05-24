@@ -20,12 +20,17 @@ const UserWrapper = styled.span`
   font-weight: 700;
   color ${ (props) =>
     props.color === colors.purple ? colors.purple : colors.orange };
+
+  span {
+    color: ${ Colors.text_primary };
+  }
 `;
 
 const User = ({ username, color, contrast }) => {
   return (
     <UserWrapper contrast={ contrast } color={ color }>
       { username }
+      <span>: </span>
     </UserWrapper>
   );
 };

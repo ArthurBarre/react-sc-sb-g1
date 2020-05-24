@@ -27,7 +27,7 @@ const Chat = ({ username, contrast, color, message, hour, icon, mention }) => {
       contrast={ contrast } 
       color={ color }
       >
-      </User>:
+      </User>
       <Message message={ message }></Message>
       { mention && <Mention>@{ mention }</Mention> }
     </ChatWrapper>

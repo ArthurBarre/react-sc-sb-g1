@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import Colors from "../particles/Colors";
 
 const MessageWrapper = styled.span`
-  margin: 0 0 0 5px;
   color: ${ Colors.text_primary };
 `;
 
@@ -17,7 +16,6 @@ Message.propTypes = {
 };
 
 Message.defaultProps = {
-  // message: "Ceci est le contenu du message",
 };
 
 export default Message;
