@@ -10,35 +10,62 @@ export default {
 
 export const BaseChat = () => (
   <Chat
-    icon
-    hour="12h30"
-    username={text("UserName", "shatice")}
-    message={text("Message", "Mais ou et donc or ni car")}
+    username={text("UserName", "hlnlapookie")}
+    message={text("Message", "Hello, this is the default version of myself")}
   />
 );
 
-export const LongChatMessage = () => (
-  <Chat message={text("Message", "Quiquequoidontoùmaisouetdoncornicar")} />
-);
-
 export const ChatWithIcon = () => (
-  <Chat icon message={text("Message", "This is a message with icon")} />
+  <Chat
+    icon
+    username={text("UserName", "hlnlapookie")}
+    message={text(
+      "Message",
+      "Hello, this is my version with an icon before my username"
+    )}
+  />
 );
 
 export const ChatWithHour = () => (
-  <Chat hour="4:30" message={text("Message", "This is a message with icon")} />
+  <Chat
+    hour="4:30"
+    username={text("UserName", "hlnlapookie")}
+    message={text("Message", "Hello, this is my timed version")}
+  />
 );
 
 export const ChatWithMention = () => (
-  <Chat mention="tutur" message={text("Message", "Salut")} />
+  <Chat
+    username={text("UserName", "hlnlapookie")}
+    message={text(
+      "Message",
+      "Hello, this is my version with an user mentioned in my message's content"
+    )}
+    mention={text("Mention", "tutur")}
+  />
+);
+
+export const ChatWithHighlight = () => (
+  <Chat
+    highLight
+    username={text("UserName", "hlnlapookie")}
+    message={text(
+      "Message",
+      "Hello,  this is my version with highlight, used to make me more visible"
+    )}
+  />
 );
 
 export const ChatFull = () => (
   <Chat
+    highLight
+    hour="5:28"
     icon
-    hour="4:30"
-    mention="tutur"
-    username="shatice"
-    message={text("Message", "Chat with icon, hour, and message")}
+    username={text("UserName", "hlnlapookie")}
+    message={text(
+      "Message",
+      "Hello, this is my version with an user mentioned in my message content"
+    )}
+    mention={text("Mention", "tutur")}
   />
 );

@@ -7,7 +7,7 @@ const Colors = {
 	text_secondary: "#ADADB8", 
 	background_primary: "#18181b", 
 	background_secondary: "#323239", 
-	grey: "yellow"
+	orange: "#F2994A"
 };
 
 export default Colors;
